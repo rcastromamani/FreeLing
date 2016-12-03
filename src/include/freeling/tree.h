@@ -853,7 +853,7 @@ namespace freeling {
     if (this!=&p) this->tr = p.tr;
     return (*this);
   }
-  template<class T> tree_preorder_iterator<T>::tree_preorder_iterator(const basic_preorder_iterator<T,basic_nonconst_tree_iterator<T>> &p) {this->tr = p.tr;}
+  template<class T> tree_preorder_iterator<T>::tree_preorder_iterator(const basic_preorder_iterator<T,basic_nonconst_tree_iterator<T> > &p) {this->tr = p.tr;}
   template<class T> tree_preorder_iterator<T>::tree_preorder_iterator(const tree_preorder_iterator<T> &p) {this->tr = p.tr;}
   template<class T> tree_preorder_iterator<T>::tree_preorder_iterator(const tree_sibling_iterator<T> &p) {this->tr = p.tr;}
   template<class T> tree_preorder_iterator<T>::~tree_preorder_iterator() {}
@@ -866,8 +866,8 @@ namespace freeling {
     if (this!=&p) this->tr = p.tr;
     return (*this);
   }
-  template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const basic_preorder_iterator<T,basic_const_tree_iterator<T>> &p) {this->tr = p.tr;}
-  template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const basic_preorder_iterator<T,basic_nonconst_tree_iterator<T>> &p) {this->tr = p.tr;}
+  template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const basic_preorder_iterator<T,basic_const_tree_iterator<T> > &p) {this->tr = p.tr;}
+  template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const basic_preorder_iterator<T,basic_nonconst_tree_iterator<T> > &p) {this->tr = p.tr;}
   template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const tree<T> *p) {this->tr = p;}
   template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const tree_preorder_iterator<T> &p) {this->tr = p.tr;}
   template<class T> const_tree_preorder_iterator<T>::const_tree_preorder_iterator(const tree_sibling_iterator<T> &p) {this->tr = p.tr;}
@@ -884,7 +884,7 @@ namespace freeling {
     if (this!=&p) this->tr = p.tr;
     return (*this);
   }
-  template<class T> tree_sibling_iterator<T>::tree_sibling_iterator(const basic_sibling_iterator<T,basic_nonconst_tree_iterator<T>> &p) {this->tr = p.tr;}
+  template<class T> tree_sibling_iterator<T>::tree_sibling_iterator(const basic_sibling_iterator<T,basic_nonconst_tree_iterator<T> > &p) {this->tr = p.tr;}
   template<class T> tree_sibling_iterator<T>::tree_sibling_iterator(const tree_sibling_iterator<T> &p) {this->tr = p.tr;}
   template<class T> tree_sibling_iterator<T>::tree_sibling_iterator(const tree_preorder_iterator<T> &p) {this->tr = p.tr;}
   template<class T> tree_sibling_iterator<T>::~tree_sibling_iterator() {}
@@ -898,8 +898,8 @@ namespace freeling {
     if (this!=&p) this->tr = p.tr;
     return (*this);
   }
-  template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const basic_sibling_iterator<T,basic_const_tree_iterator<T>> &p) {this->tr = p.tr;}
-  template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const basic_sibling_iterator<T,basic_nonconst_tree_iterator<T>> &p) {this->tr = p.tr;}
+  template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const basic_sibling_iterator<T,basic_const_tree_iterator<T> > &p) {this->tr = p.tr;}
+  template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const basic_sibling_iterator<T,basic_nonconst_tree_iterator<T> > &p) {this->tr = p.tr;}
   template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const tree<T> *p) {this->tr = p;}
   template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const tree_sibling_iterator<T> &p) {this->tr = p.tr;}
   template<class T> const_tree_sibling_iterator<T>::const_tree_sibling_iterator(const tree_preorder_iterator<T> &p) {this->tr = p.tr;}
